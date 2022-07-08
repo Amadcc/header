@@ -635,21 +635,52 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         },
         mounted() {
-            const fetchMenu = async () => {
-                try {
-                    const res = await axios
-                        .get('/top-left-menu/', {
-                            baseURL: "https://content-sales.bi.group"
-                        })
-                        .then((res) => {
-                            this.menu = res.data.body;
-                            console.log('menu', this.menu)
-                        });
-                } catch (error) {
-                    console.log(error);
-                }
-            };
-            fetchMenu();
+            try {
+                const loadScript = (url) =>
+                    new Promise((resolve, reject) => {
+                        const script = document.createElement('script')
+                        script.src = url
+
+                        script.onload = () => resolve(script)
+                        script.onerror = () =>
+                            reject(new Error(`Ошибка загрузки скрипта ${src}`))
+
+                        document.head.append(script)
+                    })
+                loadScript('https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js')
+                    .then(() => {
+                        return Promise.all([
+                            loadScript(
+                                'https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js'
+                            ),
+                            loadScript(
+                                'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js'
+                            ),
+                            loadScript(
+                                'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js'
+                            ),
+                        ])
+                    })
+                    .then(() => {
+                        const fetchMenu = async () => {
+                            try {
+                                const res = await axios
+                                    .get('/top-left-menu/', {
+                                        baseURL: "https://content-sales.bi.group"
+                                    })
+                                    .then((res) => {
+                                        this.menu = res.data.body;
+                                        console.log('menu', this.menu)
+                                    });
+                            } catch (error) {
+                                console.log(error);
+                            }
+                        };
+                        fetchMenu();
+                    })
+            } catch (error) {
+                console.log('Все скрипты не загружены')
+            }
 
             window.addEventListener('resize', () => {
                 if (window.innerWidth >= 992) {

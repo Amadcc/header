@@ -20,8 +20,6 @@ body {
 :before {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 a {
@@ -840,6 +838,7 @@ a:hover {
   }
 }
 .dropdown-menu {
+  display: none;
   border: none;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
@@ -855,6 +854,9 @@ a:hover {
   background-clip: padding-box;
   z-index: 250;
   float: left;
+}
+.dropdown-menu.show {
+  display: block;
 }
 .dropdown-menu[x-placement^=bottom], .dropdown-menu[x-placement^=left], .dropdown-menu[x-placement^=right], .dropdown-menu[x-placement^=top] {
   right: auto;
