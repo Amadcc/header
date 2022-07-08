@@ -358,7 +358,6 @@ Vue.component('con-modal-content-user-data-call', {
         let el = this.$refs['bi-header__back-call-phone-number']
         this.mask = IMask(el, {
             mask: '+{7}(000)000-00-00',
-
         });
     },
     template: `
@@ -462,6 +461,7 @@ document.addEventListener('DOMContentLoaded', function () {
         el: '#bi-header',
         // define data - initial display text
         data: {
+            isMounted: false,
             menu: [],
             show: false,
             consulting: null,
@@ -592,6 +592,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     _.dropdownClose();
                 }
             });
+
+            this.isMounted = true;
         },
         /*
         computed: {
@@ -601,7 +603,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         */
         template: `
-        <div class="wrapper">
+        <div v-show="isMounted" class="wrapper">
         <div class="desktop_menu" :class="{open: show}">
             <div class="container desktop_menu__content">
             <div>
