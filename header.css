@@ -63,6 +63,9 @@ a:hover {
 
 .wrapper {
   font-family: PTRootUIWeb, sans-serif;
+}
+
+.wrapper a, .wrapper p, .wrapper span {
   letter-spacing: normal;
 }
 
