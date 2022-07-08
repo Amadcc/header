@@ -462,163 +462,11 @@ document.addEventListener('DOMContentLoaded', function () {
         el: '#bi-header',
         // define data - initial display text
         data: {
-            menu: [
-                {
-                    "__component": "menu.link",
-                    "id": 1,
-                    "label": "Покупка онлайн",
-                    "url": "/filter",
-                    "style": "none"
-                },
-                {
-                    "__component": "menu.link",
-                    "id": 2,
-                    "label": "Акции",
-                    "url": "/promotion",
-                    "style": "none"
-                },
-                {
-                    "__component": "menu.link",
-                    "id": 3,
-                    "label": "Ипотека",
-                    "url": "/mortgage",
-                    "style": "none"
-                },
-                {
-                    "__component": "menu.dropdown",
-                    "id": 1,
-                    "label": "Способы покупки",
-                    "links": [
-                        {
-                            "id": 5,
-                            "label": "Auto Trade-in",
-                            "url": "/auto-trade",
-                            "style": "none"
-                        },
-                        {
-                            "id": 6,
-                            "label": "Trade-in",
-                            "url": "/trade-in",
-                            "style": "none"
-                        },
-                        {
-                            "id": 71,
-                            "label": "Центр онлайн продаж",
-                            "url": "/cop",
-                            "style": "none"
-                        },
-                        {
-                            "id": 74,
-                            "label": "100% оплата",
-                            "url": "/full-buy",
-                            "style": "none"
-                        },
-                        {
-                            "id": 75,
-                            "label": "Рассрочка",
-                            "url": "/instalment",
-                            "style": "none"
-                        }
-                    ]
-                },
-                {
-                    "__component": "menu.link",
-                    "id": 4,
-                    "label": "Вторичка",
-                    "url": "https://dom.kz/?utm_source=nova_city&utm_medium=referral&utm_campaign=main",
-                    "style": "none"
-                },
-                {
-                    "__component": "menu.dropdown",
-                    "id": 2,
-                    "label": "Жильцам",
-                    "links": [
-                        {
-                            "id": 7,
-                            "label": "Smart Remont",
-                            "url": "https://smartremont.kz/?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu",
-                            "style": "none"
-                        },
-                        {
-                            "id": 49,
-                            "label": "BI Service",
-                            "url": "https://clients-service.bi.group/?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu",
-                            "style": "none"
-                        },
-                        {
-                            "id": 50,
-                            "label": "Connected Home",
-                            "url": "https://connectedhome.kz/ru",
-                            "style": "none"
-                        },
-                        {
-                            "id": 51,
-                            "label": "Для новых владельцев",
-                            "url": "/page/dlya-novih-vladelcev-2",
-                            "style": "none"
-                        },
-                        {
-                            "id": 52,
-                            "label": "Страхование",
-                            "url": "/page/strahovanie-nedvizhimosti",
-                            "style": "none"
-                        }
-                    ]
-                },
-                {
-                    "__component": "menu.dropdown",
-                    "id": 20,
-                    "label": "Холдинг",
-                    "links": [
-                        {
-                            "id": 81,
-                            "label": "Миссия и ценности ",
-                            "url": "https://company.bi.group/ru/missions-and-values?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu",
-                            "style": "none"
-                        },
-                        {
-                            "id": 70,
-                            "label": "Новости",
-                            "url": "/news",
-                            "style": "none"
-                        },
-                        {
-                            "id": 82,
-                            "label": "Стать партнером ",
-                            "url": "https://partners.bi-group.org/ru/",
-                            "style": "none"
-                        },
-                        {
-                            "id": 83,
-                            "label": "О компании",
-                            "url": "https://company.bi.group/ru/about?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu",
-                            "style": "none"
-                        },
-                        {
-                            "id": 72,
-                            "label": "Карьера",
-                            "url": "/jobs",
-                            "style": "none"
-                        },
-                        {
-                            "id": 73,
-                            "label": "Контакты",
-                            "url": "/contacts",
-                            "style": "none"
-                        }
-                    ]
-                },
-                {
-                    "__component": "menu.link",
-                    "id": 80,
-                    "label": "BI Гид",
-                    "url": "/guide",
-                    "style": "none"
-                }
-            ],
+            menu: [],
             show: false,
             consulting: null,
-            prevScroll: 0
+            prevScroll: 0,
+            isMobile: false
         },
         methods: {
             bodyScroll(state) {
@@ -646,9 +494,18 @@ document.addEventListener('DOMContentLoaded', function () {
                     e.target.nextElementSibling.classList.remove('open');
                 }
                 else {
+                    this.dropdownClose();
                     e.target.ariaExpanded = "true";
                     e.target.nextElementSibling.classList.add('open');
                 }
+            },
+            dropdownClose() {
+                document.querySelectorAll('.dropdown').forEach(function (dropdown) { 
+                    dropdown.ariaExpanded = "false";
+                });
+                document.querySelectorAll('.dropdown-menu').forEach(function (menu) { 
+                    menu.classList.remove('open')
+                });
             },
             link(href) {
                 window.open(href, '_blank');
@@ -683,17 +540,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         document.head.append(script)
                     })
-                loadScript('https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js')
+                loadScript('https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js')
                     .then(() => {
                         return Promise.all([
                             loadScript(
-                                'https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js'
-                            ),
-                            loadScript(
-                                'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js'
-                            ),
-                            loadScript(
-                                'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js'
+                                './mask.js'
                             ),
                         ])
                     })
@@ -715,14 +566,30 @@ document.addEventListener('DOMContentLoaded', function () {
                         fetchMenu();
                     })
             } catch (error) {
-                console.log('Все скрипты не загружены')
+                console.error('Скрипты не загружены')
             }
 
-            window.addEventListener('resize', () => {
+            const checkWidth = () => {
                 if (window.innerWidth >= 992) {
-                    this.closeMenu()
+                    this.isMobile = false;
+                } else {
+                    this.isMobile = true;
                 }
+            }
+            checkWidth();
+            
+            window.addEventListener('resize', () => {
+                checkWidth();
+                if (!this.isMobile) this.closeMenu();
             }, true)
+
+            let _ = this;
+            window.addEventListener('click', function (e) {
+                let check = e.target.closest('.dropdown')?.parentElement;
+                if (!check) {
+                    _.dropdownClose();
+                }
+            });
         },
         /*
         computed: {
@@ -965,13 +832,14 @@ document.addEventListener('DOMContentLoaded', function () {
               <a class="nav__link" @click.prevent="link('https://bi.group/ru/mortgage')"><span>Ипотека</span></a>
             </div>
             <div>
-              <a href="#" class="nav__link dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span>Способы покупки</span>
+              <a class="nav__link dropdown" aria-expanded="false" @click.prevent="dropdownToggle">
+                <span>Способы покупки</span>
                 ${media.svg['carret-down-2']}
               </a>
               <div class="dropdown-menu">
                 <a class="dropdown" @click.prevent="link('https://bi.group/ru/trade-in')"><span>Центр онлайн продаж</span></a>
                 <a class="dropdown" @click.prevent="link('https://bi.group/ru/cop')"><span>Trade-in</span></a>
-                <a class="dropdown" @click.prevent="link('https://pn.bi.group/')"><span>Пенсионные накопления</span></a>
+                <a class="dropdown" @click.prevent="link('https://pn.bi.group/')"><span style="white-space: nowrap;">Пенсионные накопления</span></a>
                 <a class="dropdown" @click.prevent="link('https://bi.group/ru/full-buy')"><span>Оплаты</span></a>
               </div>
             </div>
@@ -979,8 +847,8 @@ document.addEventListener('DOMContentLoaded', function () {
               <a class="nav__link notification" @click.prevent="link('https://bi.group/ru/guide')"><span>BI Гид</span></a>
             </div>
           </nav>
-          <div class="preview_links">
-            <a href="#" class="preview_container" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="preview_links" style="position: relative;">
+            <a class="preview_container dropdown" aria-expanded="false" @click.prevent="dropdownToggle">
               ${media.svg['icon-axis']}
               <span class="preview_container__link">360°</span>
             </a>

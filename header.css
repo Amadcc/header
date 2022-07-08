@@ -310,6 +310,9 @@ a:hover {
   grid-auto-flow: column;
   align-items: center;
 }
+.nav > div {
+  position: relative;
+}
 .nav__link {
   cursor: pointer;
   padding: 4px;
@@ -627,6 +630,8 @@ a:hover {
   padding: 12px 16px;
   min-width: 0;
 }
+.dropdown > svg,
+.dropdown > span,
 .accordion > svg,
 .accordion > .mobile_menu_link__inner,
 .accordion--mobile > svg,
@@ -859,14 +864,17 @@ a:hover {
   z-index: 250;
   float: left;
 }
-.dropdown-menu.show {
+.dropdown-menu.open {
   display: block;
+  position: absolute;
+  top: 2rem;
 }
 .dropdown-menu[x-placement^=bottom], .dropdown-menu[x-placement^=left], .dropdown-menu[x-placement^=right], .dropdown-menu[x-placement^=top] {
   right: auto;
   bottom: auto;
 }
 .dropdown-menu a {
+  font-family: PTRootUIWeb, sans-serif;
   font-size: .875rem;
   color: #01152c;
   font-weight: 500;
