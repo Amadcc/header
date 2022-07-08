@@ -65,7 +65,10 @@ a:hover {
   font-family: PTRootUIWeb, sans-serif;
 }
 
-.wrapper a, .wrapper p, .wrapper span {
+.wrapper a, .wrapper p, .wrapper span,
+.wrapper h1, .wrapper h2, .wrapper h3,
+.wrapper h4, .wrapper h5, .wrapper h6 {
+  text-transform: none;
   letter-spacing: normal;
 }
 
@@ -77,7 +80,7 @@ a:hover {
   width: 100%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  z-index: 100;
+  z-index: 1500;
   position: fixed;
   top: 0;
   left: 0;
@@ -247,7 +250,7 @@ a:hover {
   transform: translateY(-100%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  z-index: 50;
+  z-index: 1000;
 }
 @media (max-width: 991.98px) {
   .desktop_menu {
@@ -301,6 +304,7 @@ a:hover {
   line-height: 150%;
   letter-spacing: 0.15px;
   color: rgba(0, 0, 0, 0.87);
+  margin-top: 0;
   margin-bottom: 8px;
 }
 .desktop_menu_block__list {
@@ -338,7 +342,7 @@ a:hover {
     display: none;
   }
 }
-.dropdown {
+.bi-dropdown {
   cursor: pointer;
   display: grid;
   grid-gap: 4px;
@@ -351,25 +355,6 @@ a:hover {
 [aria-expanded="true"] .carret {
   transform: rotate(-180deg);
   transition: 0.3s ease-in all;
-}
-.dropdown_menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 250;
-  display: none;
-  float: left;
-  min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0.125rem 0 0;
-  font-size: 1rem;
-  color: #212529;
-  text-align: left;
-  list-style: none;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
 }
 .buyOnline {
   background: linear-gradient(283.57deg, #1c19ae 0%, #b054ce 96.77%);
@@ -410,9 +395,6 @@ a:hover {
 .bi-burger_wrapper {
   display: flex;
   align-items: center;
-  @media screen and (max-width: 991px) {
-    display: none;
-  }
 }
 @media screen and (max-width: 991px) {
   .bi-burger_wrapper {
@@ -441,7 +423,7 @@ a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background: #e5e5e5;
-  z-index: 50;
+  z-index: 1000;
   overflow: auto;
 }
 @media (min-width: 992px) {
@@ -634,8 +616,8 @@ a:hover {
   padding: 12px 16px;
   min-width: 0;
 }
-.dropdown > svg,
-.dropdown > span,
+.bi-dropdown > svg,
+.bi-dropdown > span,
 .accordion > svg,
 .accordion > .mobile_menu_link__inner,
 .accordion--mobile > svg,
@@ -679,7 +661,7 @@ a:hover {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 500;
+  z-index: 2500;
 }
 .bi-header__con-modal-container {
   position: absolute;
@@ -850,7 +832,7 @@ a:hover {
       display: flex;
   }
 }
-.dropdown-menu {
+.bi-dropdown-menu {
   display: none;
   border: none;
   border-radius: 0.5rem;
@@ -865,19 +847,19 @@ a:hover {
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
-  z-index: 250;
+  z-index: 999;
   float: left;
 }
-.dropdown-menu.open {
+.bi-dropdown-menu.open {
   display: block;
   position: absolute;
   top: 2rem;
 }
-.dropdown-menu[x-placement^=bottom], .dropdown-menu[x-placement^=left], .dropdown-menu[x-placement^=right], .dropdown-menu[x-placement^=top] {
+.bi-dropdown-menu[x-placement^=bottom], .bi-dropdown-menu[x-placement^=left], .bi-dropdown-menu[x-placement^=right], .bi-dropdown-menu[x-placement^=top] {
   right: auto;
   bottom: auto;
 }
-.dropdown-menu a {
+.bi-dropdown-menu a {
   font-family: PTRootUIWeb, sans-serif;
   font-size: .875rem;
   color: #01152c;
@@ -885,11 +867,11 @@ a:hover {
   padding: 0.375rem 1.5625rem;
   display: block;
 }
-.dropdown-menu a:hover {
+.bi-dropdown-menu a:hover {
   color: #004b94;
 }
 @media (min-width: 1200px) {
-  .dropdown-menu a {
+  .bi-dropdown-menu a {
     font-size: 1rem;
   }
 }

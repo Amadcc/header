@@ -500,10 +500,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             },
             dropdownClose() {
-                document.querySelectorAll('.dropdown').forEach(function (dropdown) { 
+                document.querySelectorAll('.bi-dropdown').forEach(function (dropdown) { 
                     dropdown.ariaExpanded = "false";
                 });
-                document.querySelectorAll('.dropdown-menu').forEach(function (menu) { 
+                document.querySelectorAll('.bi-dropdown-menu').forEach(function (menu) { 
                     menu.classList.remove('open')
                 });
             },
@@ -587,7 +587,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             let _ = this;
             window.addEventListener('click', function (e) {
-                let check = e.target.closest('.dropdown')?.parentElement;
+                let check = e.target.closest('.bi-dropdown')?.parentElement;
                 if (!check) {
                     _.dropdownClose();
                 }
@@ -610,11 +610,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div>
                     <h3 class="desktop_menu_block__title">Жильцам</h3>
                     <div class="desktop_menu_block__list">
-                        <a class="desktop_menu_link" @click.prevent="link('https://smartremont.kz/?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">Smart Remont</a>
-                        <a class="desktop_menu_link" @click.prevent="link('https://connectedhome.kz/ru')">Connected Home</a>
-                        <a class="desktop_menu_link" @click.prevent="link('https://clients-service.bi.group/?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">BI Service</a>
-                        <a class="desktop_menu_link" @click.prevent="link('https://bi.group/ru/page/strahovanie-nedvizhimosti')">Страхование</a>
-                        <a class="desktop_menu_link" @click.prevent="link('https://bi.group/ru/page/dlya-novih-vladelcev-2')">Для новых владельцев</a>
+                        <a href="#" class="desktop_menu_link" @click.prevent="link('https://smartremont.kz/?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">Smart Remont</a>
+                        <a href="#" class="desktop_menu_link" @click.prevent="link('https://connectedhome.kz/ru')">Connected Home</a>
+                        <a href="#" class="desktop_menu_link" @click.prevent="link('https://clients-service.bi.group/?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">BI Service</a>
+                        <a href="#" class="desktop_menu_link" @click.prevent="link('https://bi.group/ru/page/strahovanie-nedvizhimosti')">Страхование</a>
+                        <a href="#" class="desktop_menu_link" @click.prevent="link('https://bi.group/ru/page/dlya-novih-vladelcev-2')">Для новых владельцев</a>
                     </div>
                 </div>
             </div>
@@ -622,19 +622,19 @@ document.addEventListener('DOMContentLoaded', function () {
             <div>
                 <h3 class="desktop_menu_block__title">Холдинг</h3>
                 <div class="desktop_menu_block__list">
-                    <a class="desktop_menu_link" @click.prevent="link('https://company.bi.group/ru/missions-and-values?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">Миссия и ценности</a>
-                    <a class="desktop_menu_link" @click.prevent="link('https://company.bi.group/ru/press')">Новости</a>
-                    <a class="desktop_menu_link" @click.prevent="link('https://partners.bi-group.org/ru/')">Стать партнером </a>
-                    <a class="desktop_menu_link" @click.prevent="link('https://company.bi.group/ru/about?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">О компании</a>
-                    <a class="desktop_menu_link" @click.prevent="link('https://bi.group/ru/jobs')">Карьера</a>
-                    <a class="desktop_menu_link" @click.prevent="link('https://bi.group/ru/contacts')">Контакты</a>
+                    <a href="#" class="desktop_menu_link" @click.prevent="link('https://company.bi.group/ru/missions-and-values?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">Миссия и ценности</a>
+                    <a href="#" class="desktop_menu_link" @click.prevent="link('https://company.bi.group/ru/press')">Новости</a>
+                    <a href="#" class="desktop_menu_link" @click.prevent="link('https://partners.bi-group.org/ru/')">Стать партнером </a>
+                    <a href="#" class="desktop_menu_link" @click.prevent="link('https://company.bi.group/ru/about?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">О компании</a>
+                    <a href="#" class="desktop_menu_link" @click.prevent="link('https://bi.group/ru/jobs')">Карьера</a>
+                    <a href="#" class="desktop_menu_link" @click.prevent="link('https://bi.group/ru/contacts')">Контакты</a>
                 </div>
                 </div>
             </div>
             <div>
                 <div>
                     <h3 class="domkz__title">Вторичка</h3>
-                    <a class="domkz__inner" rel="noopener noreferrer" @click.prevent="link('https://dom.kz/?utm_source=nova_city&amp;utm_medium=referral&amp;utm_campaign=main')" style="cursor: pointer;">
+                    <a href="#" class="domkz__inner" rel="noopener noreferrer" @click.prevent="link('https://dom.kz/?utm_source=nova_city&amp;utm_medium=referral&amp;utm_campaign=main')" style="cursor: pointer;">
                         <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA5IiBoZWlnaHQ9IjQ0IiB2aWV3Qm94PSIwIDAgMTA5IDQ0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMTMuMjM2OSAyMC4zMDk0VjEwLjI2NDZIMTcuODA1NVYzNS41NTEzSDEzLjMyNjdWMzMuNjc2QzEyLjIxOTUgMzUuMDQyNiAxMC41NzM2IDM1Ljk5MDIgOC4yMjk0MyAzNS45OTAyQzMuNTUxMTIgMzYuMDAwMiAwIDMyLjE0OTggMCAyNy4wNDI2QzAgMjEuOTM1NCAzLjU1MTEyIDE4LjA4NSA4LjIzOTQgMTguMDg1QzEwLjUyMzcgMTguMDg1IDEyLjEzOTcgMTguOTgyOCAxMy4yMzY5IDIwLjMwOTRaTTQuNjg4MjggMjcuMDQyNkM0LjY4ODI4IDI5LjY0NjEgNi4zOTQwMiAzMS43MzA5IDkuMDc3MzEgMzEuNzMwOUMxMS42OTA4IDMxLjczMDkgMTMuNDY2MyAyOS43MjU5IDEzLjQ2NjMgMjcuMDQyNkMxMy40NjYzIDI0LjM1OTMgMTEuNjkwOCAyMi4zNTQzIDkuMDc3MzEgMjIuMzU0M0M2LjM5NDAyIDIyLjM1NDMgNC42ODgyOCAyNC40MzkxIDQuNjg4MjggMjcuMDQyNloiIGZpbGw9IiM1OTU2RTAiLz4KPHBhdGggZD0iTTM4LjUwMzcgMjcuMDQyNkMzOC41MDM3IDMyLjE2OTggMzQuNTgzNSAzNi4wMDAyIDI5LjI4NjggMzYuMDAwMkMyNCAzNi4wMDAyIDIwLjA5OTcgMzIuMTY5OCAyMC4wOTk3IDI3LjA0MjZDMjAuMDk5NyAyMS45MTU0IDI0IDE4LjA4NSAyOS4yODY4IDE4LjA4NUMzNC41ODM1IDE4LjA4NSAzOC41MDM3IDIxLjkxNTQgMzguNTAzNyAyNy4wNDI2Wk0yNC43NjgxIDI3LjA0MjZDMjQuNzY4MSAyOS43OTU3IDI2LjcwMzIgMzEuNzMwOSAyOS4yNzY4IDMxLjczMDlDMzEuODYwMyAzMS43MzA5IDMzLjgwNTUgMjkuNzk1NyAzMy44MDU1IDI3LjA0MjZDMzMuODA1NSAyNC4yODk1IDMxLjg2MDMgMjIuMzU0MyAyOS4yNzY4IDIyLjM1NDNDMjYuNjkzMiAyMi4zNTQzIDI0Ljc2ODEgMjQuMjc5NSAyNC43NjgxIDI3LjA0MjZaIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfNTE2XzU5NTkpIi8+CjxwYXRoIGQ9Ik02MS42MjYgMTguMDg0OUM1OS4zOTE2IDE4LjA4NDkgNTcuMTY3MSAxOC44NDMgNTUuODUwNCAyMC45OTc2QzU0LjcxMzIgMTkuMTkyMSA1Mi42ODgzIDE4LjA4NDkgNTAuMjM0NCAxOC4wODQ5QzQ4Ljc1ODEgMTguMDg0OSA0Ny4zMzE3IDE4LjQ2NCA0Ni4xOTQ1IDE5LjQ1MTVMMzEuODEwNSA1LjA0NzU1QzMwLjQyNCAzLjY2MTAxIDI4LjE2OTYgMy42NTEwNCAyNi43NzMxIDUuMDQ3NTVMMjAuMDc5OCAxMS43NDA4VjE4LjcyMzNMMjkuMjc2OCA5LjUyNjM1TDQwLjc1ODEgMjEuMDA3NlYzNS41NTEySDQ1LjMzNjdWMjYuMjI0NkM0NS4zMzY3IDIzLjY2MSA0Ni45NzI2IDIyLjM3NDIgNDguOTM3NyAyMi4zNzQyQzUxLjAyMjUgMjIuMzc0MiA1Mi4yNTk0IDIzLjczMDggNTIuMjU5NCAyNi4xODQ3VjM1LjU0MTNINTYuODU3OVYyNi4yMTQ2QzU2Ljg1NzkgMjMuNjUxIDU4LjQ5MzggMjIuMzY0MiA2MC40NTg5IDIyLjM2NDJDNjIuNTMzNyAyMi4zNjQyIDYzLjc4MDYgMjMuNzIwOCA2My43ODA2IDI2LjE3NDdWMzUuNTMxM0g2OC4zNDkyVjI0LjcxODNDNjguMzM5MiAyMC43NjgyIDY1LjYzNTkgMTguMDg0OSA2MS42MjYgMTguMDg0OVoiIGZpbGw9IiM1OTU2RTAiLz4KPHBhdGggZD0iTTc0Ljg1MjkgMzMuODc1M0M3NC44NTI5IDM1LjAxMjUgNzMuODg1MyAzNS45OSA3Mi43NjgxIDM1Ljk5QzcxLjY1MDkgMzUuOTkgNzAuNjczMyAzNS4wMTI1IDcwLjY3MzMgMzMuODc1M0M3MC42NzMzIDMyLjc1ODEgNzEuNjUwOSAzMS43OTA1IDcyLjc2ODEgMzEuNzkwNUM3My44ODUzIDMxLjgwMDUgNzQuODUyOSAzMi43NTgxIDc0Ljg1MjkgMzMuODc1M1oiIGZpbGw9IiNBQkFCQjAiLz4KPHBhdGggZD0iTTgwLjExOTcgMjUuNTQ2NEg4Mi40MDRMODguNTk4NSAxOC44NzNIOTIuMjE5NUw4NC43NzgxIDI2Ljc0MzRMOTIuMzI5MiAzNS41NjEzSDg4LjY5ODNMODIuMzk0IDI4LjE0OThIODAuMTI5N1YzNS41NjEzSDc3LjI2NjhWMTAuMjY0Nkg4MC4xMjk3VjI1LjU0NjRIODAuMTE5N1oiIGZpbGw9IiNBQkFCQjAiLz4KPHBhdGggZD0iTTEwOC4wNiAyMC45Njc4TDk3Ljc4NTYgMzIuOTU3OEgxMDguMjE5VjM1LjU2MTNIOTMuOTc1MVYzMy40NjY1TDEwNC4zNjkgMjEuNDg2NUg5NC4yNzQ0VjE4Ljg3M0gxMDguMDZWMjAuOTY3OFoiIGZpbGw9IiNBQkFCQjAiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl81MTZfNTk1OSIgeDE9IjIzLjQwMyIgeTE9IjM0LjA1ODIiIHgyPSIzNS4xODAyIiB5Mj0iMjAuMDIyNiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjQjE2NzI5Ii8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0U1QjEyMiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=" alt="dom.kz logo">
                     </a>
                 </div>
@@ -653,28 +653,28 @@ document.addEventListener('DOMContentLoaded', function () {
                 </a>
             </div>
             <div class="mobile_menu_section">
-                <a class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/filter')">
+                <a href="#" class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/filter')">
                     ${media.svg['icon-buy']}
                     <div class="mobile_menu_link__inner">
                         <h6 class="mobile_menu_link__inner__title">Покупка онлайн</h6>
                     </div>
                     ${media.svg['carret-right']}
                 </a>
-                <a class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/promotion')">
+                <a href="#" class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/promotion')">
                     ${media.svg['icon-discount']}
                     <div class="mobile_menu_link__inner">
                         <h6 class="mobile_menu_link__inner__title">Акции</h6>
                     </div>
                     ${media.svg['carret-right']}
                 </a>
-                <a class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/mortgage')">
+                <a href="#" class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/mortgage')">
                     ${media.svg['icon-mortgage']}
                     <div class="mobile_menu_link__inner">
                         <h6 class="mobile_menu_link__inner__title">Ипотека</h6>
                     </div>
                     ${media.svg['carret-right']}
                 </a>
-                <a class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/guide')">
+                <a href="#" class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/guide')">
                     ${media.svg['icon-guide']}
                     <div class="mobile_menu_link__inner">
                         <h6 class="mobile_menu_link__inner__title">BI Гид</h6>
@@ -697,23 +697,23 @@ document.addEventListener('DOMContentLoaded', function () {
                     ${media.svg['carret-down']}
                 </button>
                 <div class="panel">
-                    <a class="mobile_menu_link" @click.prevent="link('https://360.bi-group.org/2021/nursultan/index2.html#pano1856/135.1/39.2/46.2')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://360.bi-group.org/2021/nursultan/index2.html#pano1856/135.1/39.2/46.2')">
                         <span>Нур-Султан</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://360.bi-group.org/2021/almaty/index2.html#pano43/15.3/66.6/44.4')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://360.bi-group.org/2021/almaty/index2.html#pano43/15.3/66.6/44.4')">
                         <span>Алматы</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://360.bi-group.org/2021/shymkent/index2.html#pano544950/-71.1/54.7/46.2')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://360.bi-group.org/2021/shymkent/index2.html#pano544950/-71.1/54.7/46.2')">
                         <span>Шымкент</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://360.bi-group.org/2021/atyrau/#pano2347/91.8/39.1/90.0')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://360.bi-group.org/2021/atyrau/#pano2347/91.8/39.1/90.0')">
                         <span>Атырау</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://360.bi-group.org/2021/aktau/#pano334/28.0/36.4/85.0')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://360.bi-group.org/2021/aktau/#pano334/28.0/36.4/85.0')">
                         <span>Актау</span>
                     </a>
                 </div>
-                <a class="mobile_menu_link" @click.prevent="link('https://live.bi.group/')">
+                <a href="#" class="mobile_menu_link" @click.prevent="link('https://live.bi.group/')">
                     ${media.svg['icon-camera']}
                     <div class="mobile_menu_link__inner">
                         <h6 class="mobile_menu_link__inner__title">Стройка LIVE</h6>
@@ -730,16 +730,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     ${media.svg['carret-down']}
                 </button>
                 <div class="panel">
-                    <a class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/cop')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/cop')">
                         <span>Центр онлайн продаж</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/trade-in')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/trade-in')">
                         <span>Trade-in</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://pn.bi.group/')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://pn.bi.group/')">
                         <span>Пенсионные накопления</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/full-buy')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/full-buy')">
                         <span>Оплаты</span>
                     </a>
                 </div>
@@ -752,19 +752,19 @@ document.addEventListener('DOMContentLoaded', function () {
                     ${media.svg['carret-down']}
                 </button>
                 <div class="panel">
-                    <a class="mobile_menu_link" @click.prevent="link('https://smartremont.kz/?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://smartremont.kz/?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">
                         <span>Smart Remont</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://connectedhome.kz/ru')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://connectedhome.kz/ru')">
                         <span>Connected Home</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://clients-service.bi.group/?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://clients-service.bi.group/?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">
                         <span>BI Service</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/page/strahovanie-nedvizhimosti')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/page/strahovanie-nedvizhimosti')">
                         <span>Страхование</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/page/dlya-novih-vladelcev-2')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/page/dlya-novih-vladelcev-2')">
                         <span>Для новых владельцев</span>
                     </a>
                 </div>
@@ -776,26 +776,26 @@ document.addEventListener('DOMContentLoaded', function () {
                     ${media.svg['carret-down']}
                 </button>
                 <div class="panel">
-                    <a class="mobile_menu_link" @click.prevent="link('https://company.bi.group/ru/missions-and-values?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://company.bi.group/ru/missions-and-values?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">
                         <span>Миссия и ценности</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://company.bi.group/ru/press')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://company.bi.group/ru/press')">
                         <span>Новости</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://partners.bi-group.org/ru/')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://partners.bi-group.org/ru/')">
                         <span>Стать партнером</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://company.bi.group/ru/about?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://company.bi.group/ru/about?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">
                         <span>О компании</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/jobs')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/jobs')">
                         <span>Карьера</span>
                     </a>
-                    <a class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/contacts')">
+                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/contacts')">
                         <span>Контакты</span>
                     </a>
                 </div>
-                <a class="mobile_menu_link--domkz" @click.prevent="link('https://dom.kz/?utm_source=nova_city&utm_medium=referral&utm_campaign=main')">
+                <a href="#" class="mobile_menu_link--domkz" @click.prevent="link('https://dom.kz/?utm_source=nova_city&utm_medium=referral&utm_campaign=main')">
                     <div class="mobile_menu_link__inner">
                         <h4 class="mobile_menu_link__inner__title">dom.kz</h4>
                         <p class="mobile_menu_link__inner__subtitle">Вторичка</p>
@@ -818,45 +818,55 @@ document.addEventListener('DOMContentLoaded', function () {
                 <span class="bi-burger__item"></span>
               </button>
             </div>
-            <a title="BI Group" style="cursor: pointer;" @click.prevent="link('https://bi.group/')">
+            <a href="#" title="BI Group" style="cursor: pointer;" @click.prevent="link('https://bi.group/')">
               ${media.svg['logo']}
             </a>
           </div>
           <nav class="nav">
             <div>
-                <a class="nav__link buyOnline" @click.prevent="link('https://bi.group/ru/filter')">
+                <a href="#" class="nav__link buyOnline" @click.prevent="link('https://bi.group/ru/filter')">
                     ${media.svg['icon-cursor']}
                     <span>Покупка онлайн</span>
                 </a>
             </div>
             <div>
-              <a class="nav__link" @click.prevent="link('https://bi.group/ru/promotion')"><span>Акции</span></a>
+              <a href="#" class="nav__link" @click.prevent="link('https://bi.group/ru/promotion')"><span>Акции</span></a>
             </div>
             <div>
-              <a class="nav__link" @click.prevent="link('https://bi.group/ru/mortgage')"><span>Ипотека</span></a>
+              <a href="#" class="nav__link" @click.prevent="link('https://bi.group/ru/mortgage')"><span>Ипотека</span></a>
             </div>
             <div>
-              <a class="nav__link dropdown" aria-expanded="false" @click.prevent="dropdownToggle">
+              <a class="nav__link bi-dropdown" aria-expanded="false" @click.prevent="dropdownToggle">
                 <span>Способы покупки</span>
                 ${media.svg['carret-down-2']}
               </a>
-              <div class="dropdown-menu">
-                <a class="dropdown" @click.prevent="link('https://bi.group/ru/trade-in')"><span>Центр онлайн продаж</span></a>
-                <a class="dropdown" @click.prevent="link('https://bi.group/ru/cop')"><span>Trade-in</span></a>
-                <a class="dropdown" @click.prevent="link('https://pn.bi.group/')"><span style="white-space: nowrap;">Пенсионные накопления</span></a>
-                <a class="dropdown" @click.prevent="link('https://bi.group/ru/full-buy')"><span>Оплаты</span></a>
+              <div class="bi-dropdown-menu">
+                <a href="#" class="bi-dropdown" @click.prevent="link('https://bi.group/ru/trade-in')">
+                    <span>Центр онлайн продаж</span>
+                </a>
+                <a href="#" class="bi-dropdown" @click.prevent="link('https://bi.group/ru/cop')">
+                    <span>Trade-in</span>
+                </a>
+                <a href="#" class="bi-dropdown" @click.prevent="link('https://pn.bi.group/')">
+                    <span style="white-space: nowrap;">Пенсионные накопления</span>
+                </a>
+                <a href="#" class="bi-dropdown" @click.prevent="link('https://bi.group/ru/full-buy')">
+                    <span>Оплаты</span>
+                </a>
               </div>
             </div>
             <div>
-              <a class="nav__link notification" @click.prevent="link('https://bi.group/ru/guide')"><span>BI Гид</span></a>
+              <a href="#" class="nav__link notification" @click.prevent="link('https://bi.group/ru/guide')">
+                <span>BI Гид</span>
+              </a>
             </div>
           </nav>
           <div class="preview_links" style="position: relative;">
-            <a class="preview_container dropdown" aria-expanded="false" @click.prevent="dropdownToggle">
+            <a class="preview_container bi-dropdown" aria-expanded="false" @click.prevent="dropdownToggle">
               ${media.svg['icon-axis']}
               <span class="preview_container__link">360°</span>
             </a>
-            <div class="dropdown-menu">
+            <div class="bi-dropdown-menu">
               <a href="https://360.bi-group.org/2021/nursultan/index2.html#pano1856/169.0/20.1/70.2" rel="noopener noreferrer" target="_blank">Нур-Султан</a>
               <a href="https://360.bi-group.org/2021/almaty/index2.html#pano43/-29.4/63.0/44.4" rel="noopener noreferrer" target="_blank">Алматы</a>
               <a href="https://360.bi-group.org/2021/shymkent/index2.html#pano544950/-71.1/54.7/77.0" rel="noopener noreferrer" target="_blank">Шымкент</a>
