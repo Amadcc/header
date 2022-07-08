@@ -528,6 +528,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         },
         mounted() {
+            /*
             try {
                 const loadScript = (url) =>
                     new Promise((resolve, reject) => {
@@ -568,6 +569,7 @@ document.addEventListener('DOMContentLoaded', function () {
             } catch (error) {
                 console.error('Скрипты не загружены')
             }
+            */
 
             const checkWidth = () => {
                 if (window.innerWidth >= 992) {
