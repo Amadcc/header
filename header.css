@@ -153,7 +153,7 @@ a:hover {
   }
 }
 /* BurgerMenu */
-.burger {
+.bi-burger {
   -webkit-transition: all 0.3s ease-out;
   cursor: pointer;
   width: 18px;
@@ -164,7 +164,7 @@ a:hover {
   position: relative;
   outline: none !important;
 }
-.burger__item {
+.bi-burger__item {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -175,8 +175,8 @@ a:hover {
   background: #004b94;
   border-radius: 32px;
 }
-.burger__item:after,
-.burger__item:before {
+.bi-burger__item:after,
+.bi-burger__item:before {
   content: "";
   position: absolute;
   right: 0;
@@ -186,25 +186,25 @@ a:hover {
   background: #004b94;
   -webkit-transition: all 0.2s ease-out;
 }
-.burger__item:before {
+.bi-burger__item:before {
   top: -6px;
 }
-.burger__item:after {
+.bi-burger__item:after {
   top: 6px;
   width: 17px;
 }
-.burger.is_open .burger__item {
+.bi-burger.is_open .bi-burger__item {
   height: 0;
   background: #1369bf;
 }
-.burger.is_open .burger__item:before {
+.bi-burger.is_open .bi-burger__item:before {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
   transform: translate(-50%, -50%) rotate(45deg);
   top: 50%;
   left: 50%;
   background: #1369bf;
 }
-.burger.is_open .burger__item:after {
+.bi-burger.is_open .bi-burger__item:after {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
   transform: translate(-50%, -50%) rotate(-45deg);
   top: 50%;
@@ -212,7 +212,7 @@ a:hover {
   width: 17px;
   background: #1369bf;
 }
-.burger.is_open.red_circle:after {
+.bi-burger.is_open.red_circle:after {
   display: none;
 }
 .red_circle:after {
@@ -400,7 +400,7 @@ a:hover {
   grid-auto-flow: column;
   align-items: center;
 }
-.burger_wrapper {
+.bi-burger_wrapper {
   display: flex;
   align-items: center;
   @media screen and (max-width: 991px) {
@@ -408,7 +408,7 @@ a:hover {
   }
 }
 @media screen and (max-width: 991px) {
-  .burger_wrapper {
+  .bi-burger_wrapper {
     display: none;
   }
 }

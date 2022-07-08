@@ -937,14 +937,14 @@ document.addEventListener('DOMContentLoaded', function () {
     <header id="bi-cust-header" class="bi-header">
         <div class="container header-container">
           <div class="mobile_menu__wrapper">
-            <button type="button" class="burger red_circle" :class="{is_open: show}" @click.prevent="show = !show">
-              <span class="burger__item"></span>
+            <button type="button" class="bi-burger red_circle" :class="{is_open: show}" @click.prevent="show = !show">
+              <span class="bi-burger__item"></span>
             </button>
           </div>
           <div class="logo_content">
-            <div class="burger_wrapper">
-              <button type="button" class="burger" :class="{is_open: show}" @click.prevent="show = !show">
-                <span class="burger__item"></span>
+            <div class="bi-burger_wrapper">
+              <button type="button" class="bi-burger" :class="{is_open: show}" @click.prevent="show = !show">
+                <span class="bi-burger__item"></span>
               </button>
             </div>
             <a title="BI Group" style="cursor: pointer;" @click.prevent="link('https://bi.group/')">
