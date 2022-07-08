@@ -696,7 +696,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                     ${media.svg['carret-down']}
                 </button>
-                <div class="panel">
+                <div class="bi-panel">
                     <a href="#" class="mobile_menu_link" @click.prevent="link('https://360.bi-group.org/2021/nursultan/index2.html#pano1856/135.1/39.2/46.2')">
                         <span>Нур-Султан</span>
                     </a>
@@ -729,7 +729,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                     ${media.svg['carret-down']}
                 </button>
-                <div class="panel">
+                <div class="bi-panel">
                     <a href="#" class="mobile_menu_link" @click.prevent="link('https://bi.group/ru/cop')">
                         <span>Центр онлайн продаж</span>
                     </a>
@@ -751,7 +751,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                     ${media.svg['carret-down']}
                 </button>
-                <div class="panel">
+                <div class="bi-panel">
                     <a href="#" class="mobile_menu_link" @click.prevent="link('https://smartremont.kz/?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">
                         <span>Smart Remont</span>
                     </a>
@@ -775,7 +775,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                     ${media.svg['carret-down']}
                 </button>
-                <div class="panel">
+                <div class="bi-panel">
                     <a href="#" class="mobile_menu_link" @click.prevent="link('https://company.bi.group/ru/missions-and-values?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">
                         <span>Миссия и ценности</span>
                     </a>

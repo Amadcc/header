@@ -508,7 +508,7 @@ a:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.panel {
+.bi-panel {
   padding: 0 16px 0 25px;
   background-color: white;
   max-height: 0;
@@ -518,7 +518,7 @@ a:hover {
   grid-gap: 4px;
   align-content: flex-start;
 }
-.panel:last-child {
+.bi-panel:last-child {
   margin-bottom: 16px;
 }
 /* .active > svg:last-child {
@@ -527,7 +527,7 @@ a:hover {
 .active > svg {
   transform: rotate(-90deg);
 } */
-.panel.open {
+.bi-panel.open {
   max-height: 200px;
 }
 .mobile_menu_link {
@@ -575,7 +575,7 @@ a:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.panel .mobile_menu_link {
+.bi-panel .mobile_menu_link {
   padding: 0;
 }
 .mobile_menu_link {
