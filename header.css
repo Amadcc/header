@@ -63,6 +63,7 @@ a:hover {
 
 .wrapper {
   font-family: PTRootUIWeb, sans-serif;
+  letter-spacing: normal;
 }
 
 .bi-header {
