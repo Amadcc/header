@@ -885,12 +885,12 @@ document.addEventListener('DOMContentLoaded', function () {
             </a>
           </div>
           <div class="mobile_help">
-            <a href="tel:360" class="header__phone">
-              <div class="header__phone-number">
+            <a href="tel:360" class="bi-header__phone">
+              <div class="bi-header__phone-number">
                 ${media.svg['icon-phone']}
                 <span style="margin-left: .3125rem;">360</span>
               </div>
-              <div class="header__phone-text">Бесплатно</div>
+              <div class="bi-header__phone-text">Бесплатно</div>
             </a>
           </div>
         </div>

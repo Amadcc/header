@@ -68,6 +68,7 @@ a:hover {
 .wrapper a, .wrapper p, .wrapper span,
 .wrapper h1, .wrapper h2, .wrapper h3,
 .wrapper h4, .wrapper h5, .wrapper h6 {
+  font-family: inherit;
   text-transform: none;
   letter-spacing: normal;
 }
@@ -250,7 +251,7 @@ a:hover {
   transform: translateY(-100%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  z-index: 1000;
+  z-index: 1001;
 }
 @media (max-width: 991.98px) {
   .desktop_menu {
@@ -274,12 +275,14 @@ a:hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
 }
 .domkz__title {
+  font-family: inherit;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 150%;
   letter-spacing: 0.15px;
   color: rgba(0, 0, 0, 0.87);
+  margin-top: 0;
   margin-bottom: 8px;
 }
 .domkz__inner {
@@ -298,6 +301,7 @@ a:hover {
   color: #1369bf;
 }
 .desktop_menu_block__title {
+  font-family: inherit;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -319,6 +323,7 @@ a:hover {
   align-items: center;
 }
 .nav > div {
+  color: #01152c;
   position: relative;
 }
 .nav__link {
@@ -423,7 +428,7 @@ a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background: #e5e5e5;
-  z-index: 1000;
+  z-index: 1001;
   overflow: auto;
 }
 @media (min-width: 992px) {
@@ -634,13 +639,13 @@ a:hover {
 .active > svg:last-child {
   transform: rotate(-90deg);
 }
-.header__phone {
+.bi-header__phone {
   line-height: 1;
   display: block;
   margin-right: auto;
   margin-left: 0.75rem;
 }
-.header__phone-number {
+.bi-header__phone-number {
   font-weight: 600;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -649,7 +654,7 @@ a:hover {
   -ms-flex-align: center;
   align-items: center;
 }
-.header__phone-text {
+.bi-header__phone-text {
   font-size: 0.75rem;
   color: #828282;
 }
