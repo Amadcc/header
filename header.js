@@ -898,10 +898,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 ${svg('carret-down-2', theme)}
               </a>
               <div class="bi-dropdown-menu">
-                <a href="#" class="bi-dropdown" @click.prevent="link('https://bi.group/ru/trade-in')">
+                <a href="#" class="bi-dropdown" @click.prevent="link('https://bi.group/ru/cop')">
                     <span>Центр онлайн продаж</span>
                 </a>
-                <a href="#" class="bi-dropdown" @click.prevent="link('https://bi.group/ru/cop')">
+                <a href="#" class="bi-dropdown" @click.prevent="link('https://bi.group/ru/trade-in'">
                     <span>Trade-in</span>
                 </a>
                 <a href="#" class="bi-dropdown" @click.prevent="link('https://pn.bi.group/')">
