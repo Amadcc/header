@@ -20,11 +20,11 @@
 .--regis .personal_area .account > span,
 .--regis .bi-header__con-button,
 .--regis .bi-header__modal-content--title,
-.--regis .bi-header__modal-content--des {
+.--regis .bi-header__modal-content--des,
+.--regis .bi-header__input-title {
   color: var(--text-color, #fff);
 }
-.--regis a:hover,
-.--regis .bi-header__con-button:hover {
+.--regis a:hover {
   color: var(--main-color, #C99257);
 }
 .--regis .bi-header {
