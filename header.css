@@ -22,8 +22,16 @@ body {
   -webkit-box-sizing: border-box;
 }
 
+.wrapper {
+  /* var */
+  --background-color: #fff;
+  --mobile-menu-color: #e5e5e5;
+  --mobile-menu-section-color: #fff;
+  --main-color: #004b94;
+  --burger-color: #004b94;
+  font-family: PTRootUIWeb, sans-serif;
+}
 a {
-  color: #004b94;
   text-decoration: none;
 }
 a:hover {
@@ -61,10 +69,6 @@ a:hover {
   }
 }
 
-.wrapper {
-  font-family: PTRootUIWeb, sans-serif;
-}
-
 .wrapper a, .wrapper p, .wrapper span,
 .wrapper h1, .wrapper h2, .wrapper h3,
 .wrapper h4, .wrapper h5, .wrapper h6 {
@@ -75,7 +79,7 @@ a:hover {
 
 .bi-header {
   display: block;
-  background: #fff;
+  background: var(--background-color, #fff);
   -webkit-box-shadow: 5px 1.66px 6px 0 hsl(0deg 0% 40% / 10%);
   box-shadow: 5px 1.66px 6px 0 hsl(0deg 0% 40% / 10%);
   width: 100%;
@@ -162,7 +166,6 @@ a:hover {
 }
 /* BurgerMenu */
 .bi-burger {
-  -webkit-transition: all 0.3s ease-out;
   cursor: pointer;
   width: 18px;
   height: 18px;
@@ -171,6 +174,8 @@ a:hover {
   border: none;
   position: relative;
   outline: none !important;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
 }
 .bi-burger__item {
   position: absolute;
@@ -180,7 +185,7 @@ a:hover {
   transform: translate(-50%, -50%);
   width: 17px;
   height: 2px;
-  background: #004b94;
+  background-color: var(--burger-color, #004b94);;
   border-radius: 32px;
 }
 .bi-burger__item:after,
@@ -191,7 +196,8 @@ a:hover {
   width: 17px;
   height: 2px;
   border-radius: 32px;
-  background: #004b94;
+  background-color: var(--burger-color, #004b94);
+  transition: all 0.2s ease-out;
   -webkit-transition: all 0.2s ease-out;
 }
 .bi-burger__item:before {
@@ -203,22 +209,22 @@ a:hover {
 }
 .bi-burger.is_open .bi-burger__item {
   height: 0;
-  background: #1369bf;
+  background-color: var(--burger-color, #004b94);
 }
 .bi-burger.is_open .bi-burger__item:before {
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  transform: translate(-50%, -50%) rotate(45deg);
   top: 50%;
   left: 50%;
-  background: #1369bf;
+  background-color: var(--burger-color, #004b94);
+  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
 }
 .bi-burger.is_open .bi-burger__item:after {
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-  transform: translate(-50%, -50%) rotate(-45deg);
   top: 50%;
   left: 50%;
   width: 17px;
-  background: #1369bf;
+  background-color: var(--burger-color, #004b94);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
 }
 .bi-burger.is_open.red_circle:after {
   display: none;
@@ -234,11 +240,6 @@ a:hover {
   border-radius: 50%;
   border: 1px solid #fff;
 }
-/* @media screen and (max-width: 991px) {
-  .red_circle:after {
-    display: none;
-  }
-} */
 
 /* DesktopMenu */
 .desktop_menu {
@@ -264,7 +265,7 @@ a:hover {
   visibility: visible;
 }
 .desktop_menu__content {
-  background-color: #fff;
+  background-color: var(--background-color, #fff);
   padding: 80px 32px 24px;
   display: grid;
   grid-auto-flow: column;
@@ -292,13 +293,16 @@ a:hover {
   padding: 24px;
 }
 .desktop_menu_link {
+  color: #1369bf;
   cursor: pointer;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 150%;
   letter-spacing: 0.15px;
-  color: #1369bf;
+}
+.desktop_menu_link:hover {
+  color: #003161;
 }
 .desktop_menu_block__title {
   font-family: inherit;
@@ -339,7 +343,7 @@ a:hover {
 .nav__link:hover,
 .nav__link:focus,
 .nav__link.is-active {
-  color: #004b94;
+  color: var(--main-color, #004b94);
   text-decoration: none;
 }
 @media screen and (max-width: 991px) {
@@ -427,7 +431,7 @@ a:hover {
   transform: translateX(-100%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background: #e5e5e5;
+  background-color: var(--mobile-menu-color, #e5e5e5);
   z-index: 1001;
   overflow: auto;
 }
@@ -460,7 +464,7 @@ a:hover {
   align-content: flex-start;
 }
 .mobile_menu_section {
-  background: #fff;
+  background: var(--mobile-menu-section-color, #fff);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -470,7 +474,7 @@ a:hover {
   visibility: visible;
 }
 .accordion--mobile {
-  background-color: #fff;
+  background-color: var(--mobile-menu-section-color, #fff);
   color: #444;
   cursor: pointer;
   width: 100%;
@@ -510,7 +514,7 @@ a:hover {
 }
 .bi-panel {
   padding: 0 16px 0 25px;
-  background-color: white;
+  background-color: var(--mobile-menu-section-color, #fff);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
@@ -606,7 +610,7 @@ a:hover {
   margin: 0;
 }
 .accordion {
-  background-color: #fff;
+  background-color: var(--mobile-menu-section-color, #fff);
   color: #444;
   cursor: pointer;
   width: 100%;
@@ -737,7 +741,7 @@ a:hover {
 }
 .bi-header__modal-content--title--success {
   margin-top: 50px;
-  color: #004B94;
+  color: var(--main-color, #004b94);
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -775,12 +779,12 @@ a:hover {
   text-decoration: none;
 }
 .bi-header__con-button-primary {
-  background: #1369BF;
+  background: var(--main-color, #004b94);
   color: #FFFFFF;
 }
 .bi-header__con-button:hover {
   cursor: pointer;
-  border: 1px solid #1369BF;
+  border: 1px solid var(--main-color, #004b94);
   box-shadow: 0 1px 4px rgba(19, 105, 191, 0.25);
 }
 .bi-header__whatsapp-mobile {
@@ -823,7 +827,7 @@ a:hover {
   box-shadow: 0px 1px 4px rgba(255, 51, 51, 0.25);
 }
 .bi-header__label-input .bi-header__input:focus {
-  border: 1px solid #1369BF;
+  border: 1px solid var(--main-color, #004b94);
   box-shadow: 0px 1px 4px rgba(19, 105, 191, 0.25);
 }
 .bi-mb-32 {
@@ -850,7 +854,7 @@ a:hover {
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: var(--background-color, #fff);
   background-clip: padding-box;
   z-index: 999;
   float: left;
@@ -873,7 +877,7 @@ a:hover {
   display: block;
 }
 .bi-dropdown-menu a:hover {
-  color: #004b94;
+  color: var(--main-color, #004b94);
 }
 @media (min-width: 1200px) {
   .bi-dropdown-menu a {

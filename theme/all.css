@@ -1,0 +1,36 @@
+/* REGIS THEME (https://regis-hills.bi.group/) */
+.--regis {
+  /* var */
+  --background-color: #351739;
+  --mobile-menu-color: #331637;
+  --mobile-menu-section-color: #4E2154;
+  --main-color: #C99257;
+  --burger-color: #fff;
+  --text-color: #fff;
+}
+.--regis a,
+.--regis .bi-header,
+.--regis .mobile_menu_link__inner__title,
+.--regis .bi-header__phone-text,
+.--regis .accordion__inner__title,
+.--regis .mobile_menu_link > span,
+.--regis .domkz__title,
+.--regis .desktop_menu_block__title,
+.--regis .preview_links .preview_container__link,
+.--regis .personal_area .account > span {
+  color: var(--text-color, #fff);
+}
+.--regis a:hover {
+  color: var(--main-color, #C99257);
+}
+.--regis .bi-header {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+}
+.--regis .buyOnline {
+  background: transparent;
+  border: 1px solid var(--main-color, #C99257);
+  border-radius: 8px;
+}
+.--regis .domkz__inner {
+  border-color: #fff;
+}
