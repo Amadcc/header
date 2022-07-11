@@ -30,7 +30,7 @@ a:hover {
   text-decoration: none;
 }
 
-.container {
+.bi-container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -41,22 +41,22 @@ a:hover {
 }
 
 @media (min-width: 576px) {
-  .container {
+  .bi-container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container {
+  .bi-container {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .bi-container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .bi-container {
     max-width: 1140px;
   }
 }

@@ -806,7 +806,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </div>
     <header id="bi-cust-header" class="bi-header">
-        <div class="container header-container">
+        <div class="bi-container header-container">
           <div class="mobile_menu__wrapper">
             <button type="button" class="bi-burger red_circle" :class="{is_open: show}" @click.prevent="show = !show">
               <span class="bi-burger__item"></span>
