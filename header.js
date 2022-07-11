@@ -292,7 +292,7 @@ Vue.component('con-modal-content-idle', {
     template: `
         <div class="bi-header__modal-content">
             <h1 class="bi-header__modal-content--title">Нужна консультация?</h1>
-            <p class="bi-header__modal-content--des bi-mb-32">Выбрите один из вариантов конcультации</p>
+            <p class="bi-header__modal-content--des bi-mb-32">Выберите один из вариантов конcультации</p>
             
 <!--            <button @click="$emit('run', 'CONSULT_TYPE')" class="bi-header__con-button">Видеоконсультация</button>-->
             <button @click="$emit('run', 'BACK_CALL')" class="bi-header__con-button">Обратный звонок</button>
@@ -901,7 +901,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <a href="#" class="bi-dropdown" @click.prevent="link('https://bi.group/ru/cop')">
                     <span>Центр онлайн продаж</span>
                 </a>
-                <a href="#" class="bi-dropdown" @click.prevent="link('https://bi.group/ru/trade-in'">
+                <a href="#" class="bi-dropdown" @click.prevent="link('https://bi.group/ru/trade-in')">
                     <span>Trade-in</span>
                 </a>
                 <a href="#" class="bi-dropdown" @click.prevent="link('https://pn.bi.group/')">
