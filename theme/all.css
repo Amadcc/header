@@ -17,10 +17,14 @@
 .--regis .domkz__title,
 .--regis .desktop_menu_block__title,
 .--regis .preview_links .preview_container__link,
-.--regis .personal_area .account > span {
+.--regis .personal_area .account > span,
+.--regis .bi-header__con-button,
+.--regis .bi-header__modal-content--title,
+.--regis .bi-header__modal-content--des {
   color: var(--text-color, #fff);
 }
-.--regis a:hover {
+.--regis a:hover,
+.--regis .bi-header__con-button:hover {
   color: var(--main-color, #C99257);
 }
 .--regis .bi-header {

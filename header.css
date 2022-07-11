@@ -703,7 +703,7 @@ a:hover {
   background: #1369bf;
 }
 .bi-header__con-modal-content {
-  background-color: white;
+  background-color: var(--mobile-menu-section-color, #fff);
   margin: 16px;
   border-radius: 8px;
   min-height: 350px;
@@ -758,7 +758,7 @@ a:hover {
 }
 .bi-header__con-button {
   outline: none;
-  background: #FFFFFF;
+  background-color: var(--background-color, #fff);
   border: 1px solid #E0E5ED;
   box-sizing: border-box;
   border-radius: 8px;
