@@ -885,9 +885,10 @@ a:hover {
   }
 }
 /* фикс z-index на посадках */
+/* приходится юзать !important */
 .main-construction-progress-block__view-modal {
-  z-index: 1500;
+  z-index: 1500 !important;
 }
 .breadcrumbs_landing {
-  z-index: 50;
+  z-index: 50 !important;
 }
