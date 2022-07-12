@@ -85,7 +85,7 @@ a:hover {
   width: 100%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  z-index: 1500;
+  z-index: 1250;
   position: fixed;
   top: 0;
   left: 0;
@@ -670,7 +670,7 @@ a:hover {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 2500;
+  z-index: 1500;
 }
 .bi-header__con-modal-container {
   position: absolute;
@@ -883,4 +883,11 @@ a:hover {
   .bi-dropdown-menu a {
     font-size: 1rem;
   }
+}
+/* фикс z-index на посадках */
+.main-construction-progress-block__view-modal {
+  z-index: 1500;
+}
+.breadcrumbs_landing {
+  z-index: 50;
 }
