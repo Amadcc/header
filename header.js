@@ -642,11 +642,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="desktop_menu_block__list">
                     <a href="#" class="desktop_menu_link" @click.prevent="link('https://company.bi.group/ru/missions-and-values?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">Миссия и ценности</a>
                     <a href="#" class="desktop_menu_link" @click.prevent="link('https://company.bi.group/ru/press')">Новости</a>
-                    <a href="#" class="desktop_menu_link" @click.prevent="link('https://partners.bi-group.org/ru/')">Стать партнером </a>
                     <a href="#" class="desktop_menu_link" @click.prevent="link('https://company.bi.group/ru/about?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">О компании</a>
                     <a href="#" class="desktop_menu_link" @click.prevent="link('https://bi.group/ru/jobs')">Карьера</a>
                     <a href="#" class="desktop_menu_link" @click.prevent="link('https://bi.group/ru/contacts')">Контакты</a>
                 </div>
+                </div>
+            </div>
+            <div style="max-width: 240px;">
+                <h3 class="desktop_menu_block__title">Информация для иностранных граждан</h3>
+                <div class="desktop_menu_block__list">
+                    <a href="#" class="desktop_menu_link" @click.prevent="link('https://invest.bi.group/ru/')">Инвестиции</a>
                 </div>
             </div>
             <div>
@@ -789,7 +794,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <button type="button" class="accordion--mobile" aria-expanded="false" @click.prevent="dropdownToggle">
                     <div class="accordion__inner">
                         <h4 class="accordion__inner__title">Холдинг</h4>
-                        <p class="accordion__inner__subtitle">Миссия и ценности , Новости, Стать партнером , О компании, Карьера, Контакты</p>
+                        <p class="accordion__inner__subtitle">Миссия и ценности , Новости, О компании, Карьера, Контакты</p>
                     </div>
                     ${svg('carret-down', theme)}
                 </button>
@@ -799,9 +804,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     </a>
                     <a href="#" class="mobile_menu_link" @click.prevent="link('https://company.bi.group/ru/press')">
                         <span>Новости</span>
-                    </a>
-                    <a href="#" class="mobile_menu_link" @click.prevent="link('https://partners.bi-group.org/ru/')">
-                        <span>Стать партнером</span>
                     </a>
                     <a href="#" class="mobile_menu_link" @click.prevent="link('https://company.bi.group/ru/about?utm_source=bigroup&utm_medium=referral&utm_campaign=headermenu')">
                         <span>О компании</span>
@@ -813,6 +815,13 @@ document.addEventListener('DOMContentLoaded', function () {
                         <span>Контакты</span>
                     </a>
                 </div>
+                <a href="#" class="mobile_menu_link--domkz" @click.prevent="link('https://invest.bi.group/ru/')">
+                <div class="mobile_menu_link__inner">
+                    <h4 class="mobile_menu_link__inner__title">Информация для иностранных граждан</h4>
+                    <p class="mobile_menu_link__inner__subtitle">Инвестиции</p>
+                </div>
+                    ${svg('carret-right', theme)}
+                </a>
                 <a href="#" class="mobile_menu_link--domkz" @click.prevent="link('https://dom.kz/?utm_source=nova_city&utm_medium=referral&utm_campaign=main')">
                     <div class="mobile_menu_link__inner">
                         <h4 class="mobile_menu_link__inner__title">dom.kz</h4>
